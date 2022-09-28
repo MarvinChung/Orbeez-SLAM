@@ -1,4 +1,5 @@
 # Orbeez-SLAM
+The paper is available in https://arxiv.org/abs/2209.13274
 
 The code is implemented with two open source projects 
 - orb-slam2 (GPLv3 license)
