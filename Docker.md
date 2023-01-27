@@ -29,7 +29,7 @@
    - Pull from docker hub
 
      ```
-     docker pull marvinchung/orbeez-slam:latest
+     docker pull mingupingu/orbeez-slam:latest
      ```
 
    - Build from Dockerfile
@@ -44,7 +44,7 @@
 - For WSL2 with GUI support, run the container with
 
   ```
-  docker run --name orbeezslam --gpus=all -it -v $(pwd):/program -v /data:/data -v /tmp/.X11-unix:/tmp/.X11-unix -v /mnt/wslg:/mnt/wslg -e DISPLAY -e WAYLAND_DISPLAY -e XDG_RUNTIME_DIR -e PULSE_SERVER marvinchung/orbeez-slam /bin/bash
+  docker run --name orbeezslam --gpus=all -it -v $(pwd):/program -v /data:/data -v /tmp/.X11-unix:/tmp/.X11-unix -v /mnt/wslg:/mnt/wslg -e DISPLAY -e WAYLAND_DISPLAY -e XDG_RUNTIME_DIR -e PULSE_SERVER mingupingu/orbeez-slam /bin/bash
   ```
 
   - Build
@@ -58,7 +58,7 @@
 - If you do not require GUI support, run the container with
 
   ```
-  docker run --name orbeezslam --gpus=all -it -v $(pwd):/program -v /data:/data marvinchung/orbeez-slam /bin/bash
+  docker run --name orbeezslam --gpus=all -it -v $(pwd):/program -v /data:/data mingupingu/orbeez-slam /bin/bash
   ```
 
   - Build
