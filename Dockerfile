@@ -10,6 +10,7 @@ ENV N_THREAD=16
 RUN apt update && apt install git unzip wget gcc cmake build-essential mesa-common-dev \
     libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev libglew-dev \
     libxinerama-dev libxcursor-dev libxi-dev \
+    libgtk2.0-dev pkg-config \
     python3-pip --assume-yes
 
 RUN wget https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz
