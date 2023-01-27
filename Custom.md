@@ -11,27 +11,27 @@ int main()
 	Create SLAM system. It initializes all system threads and gets ready to process frames.
 	Usage: System(const string &strVocFile, const string &strSettingsFile, const eSensor sensor, const bool bUseViewer = true, const bool bTrainExtrinsicWithPhotometric = false);
 	The third argument should be ORBEEZ::System::RGBD or ORBEEZ::System::MONO depends on your camera
-    */
-    // If camera is RGBD
-    ORBEEZ::System SLAM(argv[1], argv[2], ORBEEZ::System::RGBD, true, false);
-    // If camera is MONO
-    ORBEEZ::System SLAM(argv[1], argv[2], ORBEEZ::System::MONO, true, false);
+  */
+  // If camera is RGBD
+  ORBEEZ::System SLAM(argv[1], argv[2], ORBEEZ::System::RGBD, true, false);
+  // If camera is MONO
+  ORBEEZ::System SLAM(argv[1], argv[2], ORBEEZ::System::MONO, true, false);
 
-    // main loop
-    for(...)
-    {
-    	// tframe is the timestamp. If your dataset does not have it, you can pass [0,1,2,...] (The index of the sequence into it.
-    	imRGB, imD, tframe = read_img(...);
+  // main loop
+  for(...)
+  {
+  	// tframe is the timestamp. If your dataset does not have it, you can pass [0,1,2,...] (The index of the sequence into it.
+  	imRGB, imD, tframe = read_img(...);
 
-    	// Pass the image to the SLAM system
-    	// If camera is RGBD
-    	SLAM.TrackRGBD(imRGB, imD, tframe);
-    	// If camera is MONO
-    	SLAM.TrackMonocular(imRGB, tframe);
-    }
+  	// Pass the image to the SLAM system
+  	// If camera is RGBD
+  	SLAM.TrackRGBD(imRGB, imD, tframe);
+  	// If camera is MONO
+  	SLAM.TrackMonocular(imRGB, tframe);
+  }
 
-    // Evaluatoin Code
-    You can refer other main programs
+  // Evaluatoin Code
+  You can refer other main programs
 }
 ```
 ## Add to CMakeLists.txt
@@ -100,7 +100,7 @@ If the compilation process is successfull. You can see your program under the `b
 ```
 
 ## Write a config file for your program
-The config files are under configs. Put your config file under your folder. You can refer to other config file.
+The config files are under `configs`. Put your config file under your folder. You can refer to other config file.
 ```
 cd configs/<Monocular/RGB-D>
 mkdir <custom-dataset>
