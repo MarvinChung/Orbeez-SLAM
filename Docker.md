@@ -44,7 +44,7 @@
 - For WSL2 with GUI support, run the container with
 
   ```
-  docker run --name orbeezslam --gpus=all -it -v $(pwd):/program -v /data:/data -v /tmp/.X11-unix:/tmp/.X11-unix -v /mnt/wslg:/mnt/wslg -e DISPLAY -e WAYLAND_DISPLAY -e XDG_RUNTIME_DIR -e PULSE_SERVER marvinchung/orbeez-slam /bin/bash
+  docker run --name orbeezslam --gpus=all -it -v $(pwd):/program -v /data:/data -v /tmp/.X11-unix:/tmp/.X11-unix -v /mnt/wslg:/mnt/wslg -e DISPLAY -e WAYLAND_DISPLAY -e XDG_RUNTIME_DIR -e PULSE_SERVER mingupingu/orbeez-slam /bin/bash
   ```
 
   - Build
@@ -55,10 +55,17 @@
     cmake --build build --parallel $(nproc --all)
     ```
 
+- For Linux with GUI support, run the container with
+
+  ```
+  xhost +
+  docker run --name orbeezslam --gpus=all -it -v $(pwd):/program -v /data:/data -v /tmp/.X11-unix:/tmp/.X11-unix --net=host --ipc=host -e DISPLAY mingupingu/orbeez-slam /bin/bash
+  ```
+  
 - If you do not require GUI support, run the container with
 
   ```
-  docker run --name orbeezslam --gpus=all -it -v $(pwd):/program -v /data:/data marvinchung/orbeez-slam /bin/bash
+  docker run --name orbeezslam --gpus=all -it -v $(pwd):/program -v /data:/data mingupingu/orbeez-slam /bin/bash
   ```
 
   - Build
