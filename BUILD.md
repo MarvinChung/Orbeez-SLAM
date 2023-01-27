@@ -161,5 +161,5 @@ tar -xvzf rgbd_dataset_freiburg3_long_office_household.tgz
 ### Execute Program (Monocular Version)
 
 ```
-./build/mono_tum Vocabulary/ORBvoc.txt Examples/Monocular/TUM3.yaml ./rgbd_dataset_freiburg3_long_office_household/
+./build/mono_tum Vocabulary/ORBvoc.txt configs/Monocular/TUM/freiburg3_office.yaml ./rgbd_dataset_freiburg3_long_office_household/
 ```
