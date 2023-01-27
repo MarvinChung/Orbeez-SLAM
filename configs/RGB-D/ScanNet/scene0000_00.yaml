@@ -1,0 +1,64 @@
+%YAML 1.2
+---
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera:
+  fx: 577.590698
+  fy: 578.729797   
+  cx: 318.905426   
+  cy: 242.683609
+  k1: 0.0 
+  k2: 0.0 
+  k3: 1.163314
+  p1: 0.0 
+  p2: 0.0 
+  width: 640
+  height: 480
+# Camera frames per second 
+  fps: 30.0
+  bf: 40.0
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+  RGB: 1
+
+#--------------------------------------------------------------------------------------------
+# Depth Parameters.
+#--------------------------------------------------------------------------------------------
+
+# Close/Far threshold. Baseline times.
+ThDepth: 30.0
+
+# Deptmap values factor 
+DepthMapFactor: 1000
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+ORBextractor:
+# ORB Extractor: Number of features per image
+  nFeatures: 6000
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+  scaleFactor: 1.2
+# ORB Extractor: Number of levels in the scale pyramid	
+  nLevels: 8
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+  iniThFAST: 15
+  minThFAST: 10
+
+#--------------------------------------------------------------------------------------------
+# NeRF Parameters
+#--------------------------------------------------------------------------------------------
+
+NeRF:
+  aabb_scale: 4
+  scale: 0.1
+  offset: [0.5, 0.5, 0.5]
+  network_config_path: "./Thirdparty/instant-ngp-kf/configs/nerf/base.json"
+
+

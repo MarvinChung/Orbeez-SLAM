@@ -1,0 +1,12 @@
+[submodule "Thirdparty/ceres-solver"]
+	path = Thirdparty/ceres-solver
+	url = https://ceres-solver.googlesource.com/ceres-solver
+[submodule "Thirdparty/instant-ngp-kf"]
+	path = Thirdparty/instant-ngp-kf
+	url = https://github.com/MarvinChung/instant-ngp-kf
+[submodule "Thirdparty/g2o"]
+	path = Thirdparty/g2o
+	url = https://github.com/RainerKuemmerle/g2o
+[submodule "Thirdparty/opencv-4.5.5"]
+	path = Thirdparty/opencv-4.5.5
+	url = https://github.com/opencv/opencv

@@ -1,0 +1,51 @@
+%YAML 1.2
+---
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera:
+  fx: 517.306408
+  fy: 516.469215
+  cx: 318.643040
+  cy: 255.313989
+  k1: 0.262383
+  k2: -0.953104
+  p1: -0.005358
+  p2: 0.002628
+  k3: 1.163314
+  width: 640
+  height: 480 
+# Camera frames per second
+  fps: 30.0 
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+  RGB: 1 
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+
+ORBextractor:
+# ORB Extractor: Number of features per image
+  nFeatures: 1000          
+# ORB Extractor: Scale factor between levels in the scale pyramid      
+  scaleFactor: 1.2 
+# ORB Extractor: Number of levels in the scale pyramid
+  nLevels: 8  
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast     
+  iniThFAST: 20
+  minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# NeRF Parameters
+#--------------------------------------------------------------------------------------------
+NeRF:
+  aabb_scale: 4
+  scale: 0.33
+  offset: [0.7, 0.5, 0.1]
+  network_config_path: "./Thirdparty/instant-ngp-kf/configs/nerf/base.json"

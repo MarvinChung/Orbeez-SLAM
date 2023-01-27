@@ -1,0 +1,2 @@
+rm *.txt
+rm *.json
