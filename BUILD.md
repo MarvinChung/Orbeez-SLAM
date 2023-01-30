@@ -101,14 +101,14 @@ sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev libglew-dev
 Consider creating [personal token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-token) if you wished to clone by HTTPS (useful in docker). Remember to paste the token to somewhere as it will appear only once.
 
 ```
-git clone --recursive https://github.com/MarvinChung/NerfSlam.git
+git clone --recursive https://github.com/MarvinChung/Orbeez-SLAM.git
 git submodule update --init --recursive
 ```
 
 ### SSH
 
 ```
-git clone --recursive git@github.com:MarvinChung/NerfSlam.git
+git clone --recursive git@github.com:MarvinChung/Orbeez-SLAM.git
 git submodule update --init --recursive
 ```
 
