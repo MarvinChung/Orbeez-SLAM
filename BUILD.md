@@ -102,6 +102,7 @@ Consider creating [personal token](https://docs.github.com/en/authentication/kee
 
 ```
 git clone --recursive https://github.com/MarvinChung/Orbeez-SLAM.git
+cd Orbeez-SLAM
 git submodule update --init --recursive
 ```
 
@@ -109,6 +110,7 @@ git submodule update --init --recursive
 
 ```
 git clone --recursive git@github.com:MarvinChung/Orbeez-SLAM.git
+cd Orbeez-SLAM
 git submodule update --init --recursive
 ```
 
