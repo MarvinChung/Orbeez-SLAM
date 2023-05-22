@@ -69,3 +69,14 @@ make
 ![Alt text](tips.png?raw=true "tips")
 1. You can check the box for visualization
 2. If you can not find the correct viewpoint. You can click `First` that moves the viewpoint to the first image.
+
+### Render image and depth
+- After you finish running the scene, it will generate evaluation/`<MONO/RGBD>_<dataset name>_<folder name>`.msgpack.
+For example, if you finish running `RGBD_Replica_office0`, you can render the rgb and depth based on the ground truth trajectory:
+```
+python3 scripts/eval_Orbeez_SLAM.py --out_dir save_images --load_snapshot ./evaluation/RGBD_Replica_office0.msgpack --save_rgb --save_depth
+```
+Then, generate a video by
+```
+python3 scripts/render_video.py --images_dir save_images
+```
