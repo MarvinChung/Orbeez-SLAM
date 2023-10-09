@@ -127,9 +127,9 @@ Check the cuda architecture of the device and setup the environment variables ac
 
 The GPU arch number is list as below
 
-| RTX 30X0 | A100 | RTX 20X0 | TITAN V / V100 | GTX 10X0 / TITAN Xp | GTX 9X0 | K80 |
-| -------- | ---- | -------- | -------------- | ------------------- | ------- | --- |
-| 86       | 80   | 75       | 70             | 61                  | 52      | 37  |
+| H100 | 40X0 | 30X0 | A100 | 20X0 | TITAN V / V100 | 10X0 / TITAN Xp | 9X0 | K80 |
+|:----:|:----:|:----:|:----:|:----:|:--------------:|:---------------:|:---:|:---:|
+|   90 |   89 |   86 |   80 |   75 |             70 |              61 |  52 |  37 |
 
 ```
 export PATH="/usr/local/cuda-11.6/bin:$PATH"

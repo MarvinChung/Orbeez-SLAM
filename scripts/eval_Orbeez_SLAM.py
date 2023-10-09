@@ -61,6 +61,9 @@ def load_replica(config, args):
             xform_array = np.fromstring(line, dtype=float, sep=' ')
             xform_mat = np.array([xform_array[:4],xform_array[4:8],xform_array[8:12],xform_array[12:]])
 
+            # mono
+            xform_mat[:3, 3] = xform_mat[:3, 3] / 2.374271
+
             if i == 0:
                 # set first frame to origin
                 R_inv = np.linalg.inv(xform_mat[:3,:3])
@@ -335,7 +338,7 @@ if __name__ == "__main__":
             image = testbed.render(ref_image.shape[1], ref_image.shape[0], spp, True)
 
             # Debug code #
-            if args.debug_show:
+            if args.debug_show and ct % 100 == 0:
                 f, axarr = plt.subplots(2,1) 
                 axarr[0].imshow(image)
                 axarr[1].imshow(ref_image)
@@ -365,7 +368,7 @@ if __name__ == "__main__":
             depth = testbed.render(ref_depth.shape[1], ref_depth.shape[0], spp, True)
 
             # Debug code #
-            if args.debug_show:
+            if args.debug_show and ct % 100 == 0:
                 f, axarr = plt.subplots(2,1) 
                 axarr[0].imshow(depth[:,:,0], cmap="plasma")
                 axarr[1].imshow(ref_depth, cmap="plasma")
