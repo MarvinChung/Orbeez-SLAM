@@ -26,7 +26,7 @@
 
 2. Grab the image by either pulling from docker hub or building from Dockerfile.
 
-   - Pull from docker hub (For cuda version 11.7, architecture RTX2080Ti)
+   - Pull from docker hub (For cuda version 11.7, architecture RTX 30X0)
 
      ```
      docker pull mingupingu/orbeez-slam:latest
