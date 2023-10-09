@@ -33,7 +33,7 @@
      ```
 
    - Build from Dockerfile
-     You might need to change some config in the Dockerfile. The default Dockerfile is for cuda 11.8 and RTX 2080Ti.
+     You might need to change some config in the Dockerfile. The default Dockerfile is for cuda 11.7 and RTX 30X0.
      ```
      FROM nvidia/cuda:11.7.0-devel-ubuntu22.04
      WORKDIR /root
